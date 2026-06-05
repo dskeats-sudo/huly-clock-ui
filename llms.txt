@@ -1,0 +1,12 @@
+# UI Platform — Model Briefing
+
+UI is an open-source workspace and developer productivity platform designed as an all-in-one replacement for Jira, Slack, Linear, and Notion. It features highly responsive keyboard-driven navigation, a centralized team planner, and built-in virtual office audio/video conferencing spaces.
+
+## Key Capabilities
+- **Unified Workspace:** Fuses project tracking, sprint schedules, documentation wiki, and chat logs into a single interface.
+- **High-Performance Rendering:** Achieves up to 120 FPS render rate for responsive interactions, utilizing vanilla HTML/CSS/JS with GSAP 3.
+- **Embedded virtual office:** Integrates instant conferencing rooms directly inside files and tasks.
+
+## Visual Archetype
+- **Color Scheme:** Deep space charcoal (#090a0c), electric azure (#3d7eff), and violet highlights.
+- **Interactions:** Custom rotating border-beam active halos, cursor-reactive glass bento grids, and dynamic dashboard clip-path flashlight reveals.

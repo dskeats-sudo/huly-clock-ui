@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI | Everything App for Your Teams</title>
+  
+  <meta name="description" content="UI is an open-source workspace and developer platform. All-in-one replacement of Linear, Jira, Slack, and Notion with cursor-reactive flows and glows.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- JSON-LD Structured Data (GEO-SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://uiworkspace.dev/#organization",
+        "name": "UI Platform",
+        "url": "https://uiworkspace.dev/",
+        "logo": "https://uiworkspace.dev/images/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://uiworkspace.dev/#website",
+        "url": "https://uiworkspace.dev/",
+        "name": "UI Workspace",
+        "publisher": {
+          "@id": "https://uiworkspace.dev/#organization"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ── NAV ── -->
+  <nav>
+    <a href="#" class="logo">UI<span class="dot">.</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#office">Virtual Office</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#join-movement">Slack</a>
+    </div>
+    <div class="nav-actions">
+      <a href="#signin" class="btn-nav-outline">Sign In</a>
+      <a href="#signup" class="btn-nav-glow">Sign Up</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO SECTION ── -->
+  <section class="hero" id="hero">
+    <!-- Ambient glowing bg spots -->
+    <div class="ambient-spot ambient-blue"></div>
+    <div class="ambient-spot ambient-purple"></div>
+    
+    <div class="container hero-container">
+      <div class="hero-content">
+        <div class="eyebrow">— The Open Source Core —</div>
+        <h1>Everything App<br>for engineering teams</h1>
+        <p class="subtitle">UI is an open-source platform that serves as an all-in-one replacement of Linear, Jira, Slack, and Notion in a single unified workspace.</p>
+        
+        <!-- Premium Glowing CTA Button (Huly Style) -->
+        <div class="hero-cta-wrap">
+          <!-- Ambient glowing border and blur backdrop layers behind the button -->
+          <div class="border-button-light-blur">
+            <div class="border-button-light-blur-inner"></div>
+          </div>
+          
+          <a href="#action" class="btn-huly-action border-button-light">
+            <!-- Inner moving radial light spots -->
+            <div class="huly-btn-light-track">
+              <div class="huly-btn-light-spot spot-core"></div>
+              <div class="huly-btn-light-spot spot-blur"></div>
+            </div>
+            <span class="btn-text">See in Action</span>
+            <!-- Arrow icon matching Huly's style -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 9" class="huly-arrow-icon">
+              <path fill="currentColor" fill-rule="evenodd" d="m12.495 0 4.495 4.495-4.495 4.495-.99-.99 2.805-2.805H0v-1.4h14.31L11.505.99z" clip-rule="evenodd"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Cursor-Reactive Viewport Container -->
+      <div class="hero-viewport-container" id="flashlight-trigger" style="--hero-mask-x: 0px; --hero-mask-y: 0px; --hero-mask-size: 0px;">
+        <!-- The background electric beam video -->
+        <div class="beam-video-wrap">
+          <video autoplay loop muted playsinline class="beam-video">
+            <source src="assets/hero.mp4" type="video/mp4">
+            <source src="assets/hero.webm" type="video/webm">
+          </video>
+        </div>
+        
+        <!-- The glowing reveal layers clipped by mask -->
+        <div class="hero-reveal-mask">
+          <img class="hero-overlay-img" src="assets/overlay1.svg" alt="Glow Overlays">
+          <img class="hero-overlay-img z-10" src="assets/overlay2.svg" alt="Active States">
+        </div>
+
+        <!-- The base dashboard illustration -->
+        <img class="hero-base-img" src="assets/hero-illustration.jpg" alt="UI Dashboard Workbench Preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── RUNNING MARQUEE ── -->
+  <div class="marquee-bar">
+    <div class="marquee-track">
+      <span>• KEYBOARD SHORTCUTS</span><span>• TEAM PLANNER</span><span>• VIRTUAL CONFERENCING</span><span>• WIKI DOCS</span><span>• INBOX FLOW</span>
+      <span>• KEYBOARD SHORTCUTS</span><span>• TEAM PLANNER</span><span>• VIRTUAL CONFERENCING</span><span>• WIKI DOCS</span><span>• INBOX FLOW</span>
+    </div>
+  </div>
+
+  <!-- ── TOP SECTION DIVIDER WITH GLOW STREAK ── -->
+  <div class="section-divider-wrap top-divider">
+    <svg class="transition-curve-svg" viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fills -->
+      <path d="M 0,0 L 1440,0 L 1440,200 L 250,200 C 150,200 120,300 0,300 Z" fill="#090a0c" />
+      <path d="M 0,300 C 120,300 150,200 250,200 L 1440,200 L 1440,300 L 0,300 Z" fill="#f6f6f6" />
+      
+      <!-- Glowing white-blue streak path -->
+      <path id="top-glow-streak" d="M 0,300 C 120,300 150,200 250,200 L 1440,200" stroke="url(#top-streak-grad)" stroke-width="4" stroke-linecap="round"/>
+      
+      <defs>
+        <linearGradient id="top-streak-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3d7eff" stop-opacity="0" />
+          <stop offset="30%" stop-color="#3d7eff" stop-opacity="0.8" />
+          <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+          <stop offset="70%" stop-color="#903eff" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#903eff" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- ── FEATURES BENTO GRID ── -->
+  <section class="features" id="features">
+    <div class="section-header">
+      <h2>Unmatched productivity.</h2>
+      <p>UI is a process, project, time, and knowledge management platform built natively for speed.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- 1. KEYBOARD SHORTCUTS -->
+      <div class="bento-card bento-card-shortcuts card-hover-glow">
+        <div class="card-text">
+          <h3>Keyboard shortcuts.</h3>
+          <p>Work efficiently with instant access to common actions.</p>
+        </div>
+        <div class="shortcuts-visual">
+          <div class="command-bar-mock">
+            <span class="cmd-icon">⌘</span>
+            <span class="cmd-placeholder">Search or type a command...</span>
+          </div>
+          <div class="keys-grid">
+            <div class="key-item" id="key-cmd">⌘</div>
+            <div class="key-item" id="key-k">K</div>
+            <div class="key-item" id="key-n">N</div>
+            <div class="key-item" id="key-p">P</div>
+            <div class="key-item" id="key-tab">Tab</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. TEAM PLANNER -->
+      <div class="bento-card bento-card-planner card-hover-glow">
+        <div class="card-text">
+          <h3>Team Planner.</h3>
+          <p>Keep track of the bigger picture by viewing all individual tasks in one centralized team calendar.</p>
+        </div>
+        <div class="planner-board-mock">
+          <!-- Column 1: Yesterday (faded) -->
+          <div class="planner-col col-yesterday">
+            <span class="col-title">Yesterday</span>
+            <div class="task-card-mock">
+              <span class="task-tag tag-high">High</span>
+              <h4>Update hero section from client feedback</h4>
+              <div class="task-meta">
+                <span>💬 2</span> <span>🔗 1</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column 2: Today (Main scrolling showcase) -->
+          <div class="planner-col col-today">
+            <span class="col-title">Today <span class="add-task-btn">+</span></span>
+            <div class="task-scroller-wrap">
+              <div class="task-scroller-inner" id="task-scroller">
+                <!-- Task 1 -->
+                <div class="task-card-mock">
+                  <span class="task-tag tag-high">High</span>
+                  <h4>Refactor legacy code to improve maintainability</h4>
+                  <div class="task-meta">
+                    <span>📅 Apr 18</span>
+                  </div>
+                </div>
+                <!-- Task 2 -->
+                <div class="task-card-mock">
+                  <span class="task-tag tag-medium">Medium</span>
+                  <h4>Perform SEO audit and enhance web visibility</h4>
+                  <div class="task-meta">
+                    <span>📅 Apr 24</span> <span>💬 4</span> <span>🔗 3</span>
+                  </div>
+                </div>
+                <!-- Task 3 -->
+                <div class="task-card-mock">
+                  <span class="task-tag tag-high">High</span>
+                  <h4>Implement new features according to project requirements</h4>
+                  <div class="task-meta">
+                    <span>📅 Apr 9</span> <span>💬 2</span> <span>🔗 1</span>
+                  </div>
+                </div>
+                <!-- Task 4 -->
+                <div class="task-card-mock">
+                  <span class="task-tag tag-low">Low</span>
+                  <h4>Write unit tests for authentication helpers</h4>
+                  <div class="task-meta">
+                    <span>📅 May 2</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column 3: Create New Task -->
+          <div class="planner-col col-create">
+            <span class="col-title">Create New Task</span>
+            <div class="create-task-box-mock">
+              <div class="input-line-mock">What is the task?</div>
+              <div class="tags-row-mock">
+                <span class="tag-label-mock">UI Design</span>
+                <span class="avatar-circle-mock"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. TIME-BLOCKING -->
+      <div class="bento-card bento-card-blocking card-hover-glow">
+        <div class="card-text">
+          <h3>Time-blocking.</h3>
+          <p>Transform daily tasks into structured time blocks for focused productivity.</p>
+        </div>
+        <div class="time-blocking-grid-mock">
+          <!-- Hour indicators on the left -->
+          <div class="hour-labels">
+            <span>9 AM</span>
+            <span>10 AM</span>
+            <span>11 AM</span>
+            <span>12 PM</span>
+            <span>1 PM</span>
+            <span>2 PM</span>
+            <span>3 PM</span>
+          </div>
+          <!-- Schedule track -->
+          <div class="schedule-track">
+            <!-- Active sliding meeting block -->
+            <div class="schedule-block-active" id="active-schedule-block">
+              <div class="block-inner">
+                <div class="block-header">
+                  <span class="block-title">Design meeting</span>
+                  <span class="block-dots">•••</span>
+                </div>
+                <span class="block-time">03:00 - 04:00 pm</span>
+                <p class="block-desc">Weekly review and refinement of project prototypes.</p>
+                <button class="block-btn-join">Join Meeting</button>
+                <div class="block-footer">
+                  <span class="bell-time">🔔 10 minutes before</span>
+                  <div class="block-users">
+                    <span class="user-bubble"></span>
+                    <span class="user-bubble"></span>
+                    <span class="user-bubble-more">+5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Other task blocks layered behind -->
+            <div class="schedule-block-static b-1">
+              <span class="static-block-title">Prototype review</span>
+              <span class="static-block-time">09:00 - 09:45 am</span>
+            </div>
+            <div class="schedule-block-static b-2">
+              <span class="static-block-title">Dev team sync</span>
+              <span class="static-block-time">11:00 - 11:30 am</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. NOTIFICATIONS -->
+      <div class="bento-card bento-card-notifications card-hover-glow">
+        <div class="card-content flex-center">
+          <div class="notifications-bell-mock">
+            <!-- Loop pulsing outer rings -->
+            <div class="pulse-ring ring-1"></div>
+            <div class="pulse-ring ring-2"></div>
+            <div class="pulse-ring ring-3"></div>
+            <!-- Bell capsule container -->
+            <div class="bell-circle" id="bell-trigger">
+              <svg viewBox="0 0 24 24" class="bell-svg-icon">
+                <path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/>
+              </svg>
+              <span class="bell-badge-count">26</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-text">
+          <h3>Notifications.</h3>
+          <p>Keep up to date with any changes by receiving instant notifications.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WORK TOGETHER (VIRTUAL OFFICE LIGHT MODE) ── -->
+  <section class="work-together" id="office">
+    <div class="container">
+      <div class="content-wrap">
+        <h2>Work together.<br>Like in the office.</h2>
+        <p class="section-desc">Create customized virtual office spaces for any department or event with high quality audio and video conferencing.</p>
+        
+        <div class="office-showcase">
+          <div class="office-waves-wrap">
+            <video autoplay loop muted playsinline class="office-waves-video">
+              <source src="assets/waves.mp4" type="video/mp4">
+              <source src="assets/waves.webm" type="video/webm">
+            </video>
+          </div>
+          
+          <div class="office-call-wrap">
+            <video autoplay loop muted playsinline class="office-call-video">
+              <source src="assets/call.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        
+        <p class="office-mid-desc">Collaborating with remote teams is easy in your virtual office environment. Enjoy real-time communication within your workspace without additional software hassle.</p>
+        
+        <ul class="office-features-list">
+          <li>
+            <img src="assets/customize.png" alt="Customize workspace">
+            <h3>Customize workspace</h3>
+            <p>Create your own offices and meeting rooms to suit your team's needs.</p>
+          </li>
+          <li>
+            <img src="assets/video.png" alt="Audio and video calls">
+            <h3>Audio and video calls</h3>
+            <p>Collaborate efficiently and seamlessly with high quality virtual conferencing.</p>
+          </li>
+          <li>
+            <img src="assets/invite.png" alt="Invite guests">
+            <h3>Invite guests</h3>
+            <p>Meet with guests without ever needing to leave your workspace.</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOTTOM SECTION DIVIDER WITH GLOW STREAK ── -->
+  <div class="section-divider-wrap bottom-divider">
+    <svg class="transition-curve-svg" viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fills -->
+      <path d="M 0,0 L 1440,0 L 1440,100 C 1300,100 1280,200 1200,200 L 0,200 Z" fill="#f6f6f6" />
+      <path d="M 0,200 L 1200,200 C 1280,200 1300,100 1440,100 L 1440,300 L 0,300 Z" fill="#111111" />
+      
+      <!-- Glowing white-blue streak path -->
+      <path id="bottom-glow-streak" d="M 0,200 L 1200,200 C 1280,200 1300,100 1440,100" stroke="url(#bottom-streak-grad)" stroke-width="4" stroke-linecap="round"/>
+      
+      <defs>
+        <linearGradient id="bottom-streak-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3d7eff" stop-opacity="0" />
+          <stop offset="30%" stop-color="#3d7eff" stop-opacity="0.8" />
+          <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+          <stop offset="70%" stop-color="#903eff" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#903eff" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- ── SYNC WITH GITHUB SECTION ── -->
+  <section class="sync-with-github" id="github-sync">
+    <div class="container-narrow">
+      <h2>Sync with GitHub. Both ways.</h2>
+      <p class="section-desc">Manage your tasks efficiently with Huly's bidirectional GitHub synchronization. Use Huly as an advanced front-end for GitHub Issues and GitHub Projects.</p>
+      
+      <!-- Premium Huly Board Mockup with Glow Backdrop -->
+      <div class="github-sync-container">
+        <!-- Glow Backdrop Video -->
+        <div class="sync-glow-video-wrap">
+          <video autoplay loop muted playsinline class="sync-glow-video">
+            <source src="assets/glow.mp4" type="video/mp4">
+          </video>
+        </div>
+        
+        <!-- Wrap for Thin Prominent Gradient Border -->
+        <div class="sync-board-mockup-wrap">
+          <!-- High-Fidelity Project Board Mockup -->
+          <div class="sync-board-mockup">
+            <!-- Sidebar -->
+            <div class="board-sidebar">
+              <div class="board-logo">
+                <!-- Small Huly Logo rounded icon -->
+                <svg viewBox="0 0 100 100" class="sidebar-logo-svg">
+                  <path d="M 28 28 C 38 28, 42 38, 50 50 C 58 62, 62 72, 72 72" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" />
+                  <path d="M 72 28 C 62 28, 58 38, 50 50 C 42 62, 38 72, 28 72" stroke="white" stroke-width="14" stroke-linecap="round" fill="none" />
+                </svg>
+              </div>
+              
+              <div class="sidebar-progress-pill">
+                <div class="progress-glow-border"></div>
+                <div class="progress-val-text">56%</div>
+                <div class="progress-label-text">TO DO</div>
+              </div>
+              
+              <div class="sidebar-nav">
+                <div class="nav-item active">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"/></svg>
+                </div>
+                <div class="nav-item">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zm0-12H5V6h14v2z"/></svg>
+                </div>
+                <div class="nav-item">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                </div>
+                <div class="nav-item">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.59-12.42L10 14.17l-2.59-2.58L6 13l4 4 8-8z"/></svg>
+                </div>
+                <div class="nav-item">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                </div>
+                <div class="nav-item">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                </div>
+                <div class="nav-item plus">
+                  <svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Board Main Panel -->
+            <div class="board-main">
+              <!-- Board Header -->
+              <div class="board-header">
+                <div class="header-search">
+                  <svg class="search-icon" viewBox="0 0 24 24" width="14" height="14"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 5 5s4.5 2.01 4.5 4.5S11.99 14 9.5 14z"/></svg>
+                  <span class="search-placeholder">Search...</span>
+                </div>
+                <div class="header-actions">
+                  <button class="header-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    View
+                  </button>
+                  <button class="header-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" width="12" height="12"><path fill="currentColor" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                    Show
+                  </button>
+                </div>
+              </div>
+              
+              <!-- Scrollable Board Body -->
+              <div class="board-scrollable">
+                <!-- Group 1: In Progress -->
+                <div class="issue-group">
+                  <div class="group-header">
+                    <span class="arrow-down">▼</span> IN PROGRESS <span class="group-count">6</span>
+                  </div>
+                  
+                  <!-- Row 1 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-51</div>
+                    <div class="row-status in-progress">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3d7eff" stroke-width="4" stroke-dasharray="66, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Store markup as ProseMirror JSON instead of HTML</div>
+                    <div class="row-tags"><span class="badge bg-purple">MVP</span></div>
+                    <div class="row-time">2/3</div>
+                    <div class="row-comments"></div>
+                    <div class="row-hours">24 hrs</div>
+                    <div class="row-date">12 Mar</div>
+                    <div class="row-assignee"><img src="assets/orange-pin-image.jpg" alt="BC"></div>
+                  </div>
+  
+                  <!-- Row 2 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-60</div>
+                    <div class="row-status in-progress">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3d7eff" stroke-width="4" stroke-dasharray="33, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Feature Request: Document analysis</div>
+                    <div class="row-tags"><span class="badge bg-purple">PreMVP</span></div>
+                    <div class="row-time">1/3</div>
+                    <div class="row-comments">💬 4</div>
+                    <div class="row-hours">14 hrs</div>
+                    <div class="row-date highlighted">5 jun 2024</div>
+                    <div class="row-assignee"><img src="assets/blue-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+  
+                  <!-- Row 3 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-94</div>
+                    <div class="row-status in-progress">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3d7eff" stroke-width="4" stroke-dasharray="33, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Improve inbox grouping</div>
+                    <div class="row-tags"></div>
+                    <div class="row-time">1/3</div>
+                    <div class="row-comments"></div>
+                    <div class="row-hours">12 hrs</div>
+                    <div class="row-date">13 Mar</div>
+                    <div class="row-assignee"><img src="assets/orange-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+  
+                  <!-- Row 4 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-66</div>
+                    <div class="row-status in-progress">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3d7eff" stroke-width="4" stroke-dasharray="66, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Storage adapter configuration</div>
+                    <div class="row-tags"></div>
+                    <div class="row-time">2/3</div>
+                    <div class="row-comments">💬 2</div>
+                    <div class="row-hours">28 hrs</div>
+                    <div class="row-date">13 Mar</div>
+                    <div class="row-assignee"><img src="assets/blue-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+  
+                  <!-- Row 5 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-58</div>
+                    <div class="row-status in-progress">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#3d7eff" stroke-width="4" stroke-dasharray="0, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Create workspace confusion</div>
+                    <div class="row-tags"><span class="badge bg-yellow">Marketing</span></div>
+                    <div class="row-time"></div>
+                    <div class="row-comments"></div>
+                    <div class="row-hours">28 hrs</div>
+                    <div class="row-date">15 Mar</div>
+                    <div class="row-assignee"><div class="row-assignee-text">BC</div></div>
+                  </div>
+  
+                  <!-- Row 6 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-51</div>
+                    <div class="row-status bug">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ff4d4d" stroke-width="4" stroke-dasharray="33, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">BUG &gt; Copy URL link does not work in this button (copy)</div>
+                    <div class="row-tags"></div>
+                    <div class="row-time">1/3</div>
+                    <div class="row-comments">💬 6</div>
+                    <div class="row-hours">8 hrs</div>
+                    <div class="row-date highlighted">9 jun 2024</div>
+                    <div class="row-assignee"><img src="assets/orange-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+                </div>
+                
+                <!-- Group 2: Under Review -->
+                <div class="issue-group">
+                  <div class="group-header">
+                    <span class="arrow-down">▼</span> UNDER REVIEW <span class="group-count">3</span>
+                  </div>
+                  
+                  <!-- Row 7 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-67</div>
+                    <div class="row-status review">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ffaa81" stroke-width="4" stroke-dasharray="0, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Team &gt; change icon</div>
+                    <div class="row-tags"><span class="badge bg-yellow">Marketing</span></div>
+                    <div class="row-time"></div>
+                    <div class="row-comments">💬 12</div>
+                    <div class="row-hours">24 hrs</div>
+                    <div class="row-date">18 Mar</div>
+                    <div class="row-assignee"><div class="row-assignee-text">CP</div></div>
+                  </div>
+  
+                  <!-- Row 8 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-45</div>
+                    <div class="row-status review">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ffaa81" stroke-width="4" stroke-dasharray="0, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Feature Request: Lock document content</div>
+                    <div class="row-tags"><span class="badge bg-purple">PreMVP</span></div>
+                    <div class="row-time"></div>
+                    <div class="row-comments">💬 6</div>
+                    <div class="row-hours">14 hrs</div>
+                    <div class="row-date">18 Mar</div>
+                    <div class="row-assignee"><img src="assets/blue-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+  
+                  <!-- Row 9 -->
+                  <div class="issue-row">
+                    <div class="row-drag">⋮⋮</div>
+                    <div class="row-id">CRM-44</div>
+                    <div class="row-status review">
+                      <svg class="status-circle-svg" viewBox="0 0 36 36">
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="4"/>
+                        <path d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="#ffaa81" stroke-width="4" stroke-dasharray="0, 100"/>
+                      </svg>
+                    </div>
+                    <div class="row-title">Create the potential partners list</div>
+                    <div class="row-tags"></div>
+                    <div class="row-time"></div>
+                    <div class="row-comments">💬 1</div>
+                    <div class="row-hours">28 hrs</div>
+                    <div class="row-date">21 Mar</div>
+                    <div class="row-assignee"><img src="assets/orange-pin-image.jpg" alt="Assignee"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- List details -->
+      <ul class="sync-features-list">
+        <li>
+          <div class="icon-wrap"><img src="assets/2a9e454742efc41c8de5d3889bf55d34.svg" alt="Two-way sync"></div>
+          <h3>Two-way synchronization</h3>
+          <p>Integrate your task tracker with GitHub to sync changes instantly.</p>
+        </li>
+        <li>
+          <div class="icon-wrap"><img src="assets/4d5dd04473e9f2ebc5c49291c1f73681.svg" alt="Private tasks"></div>
+          <h3>Private tasks</h3>
+          <p>Integration and management of multiple data repositories effectively.</p>
+        </li>
+        <li>
+          <div class="icon-wrap"><img src="assets/7338cddab3021d50f73a3d36c88df490.svg" alt="Multiple repositories"></div>
+          <h3>Multiple repositories</h3>
+          <p>Organize multiple projects for more effective planning and collaboration.</p>
+        </li>
+        <li>
+          <div class="icon-wrap"><img src="assets/c1edb00984cbfb46dd8eda516738f4f0.svg" alt="Milestone migration"></div>
+          <h3>Milestone migration</h3>
+          <p>Seamless migration of key project milestones between repositories.</p>
+        </li>
+        <li>
+          <div class="icon-wrap"><img src="assets/352118264d839bffe60735ff4aeed26f.svg" alt="Track progress"></div>
+          <h3>Track progress</h3>
+          <p>Keep track of GitHub contributions and changes within your workspace.</p>
+        </li>
+        <li>
+          <div class="icon-wrap"><img src="assets/12b7898bd7ddbbbbcacf68c0f47c7c51.svg" alt="Advanced filtering"></div>
+          <h3>Advanced filtering</h3>
+          <p>Precise project data search with advanced filtering capabilities.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+<!-- ── GITHUB TO METABRAIN DIVIDER (DARK TO LIGHT) ── -->
+  <div class="section-divider-wrap github-to-metabrain-divider">
+    <svg class="transition-curve-svg" viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fills -->
+      <path d="M 0,0 L 1440,0 L 1440,200 L 250,200 C 150,200 120,300 0,300 Z" fill="#111111" />
+      <path d="M 0,300 C 120,300 150,200 250,200 L 1440,200 L 1440,300 L 0,300 Z" fill="#ffffff" />
+      <!-- Glowing white-blue streak path -->
+      <path id="github-glow-streak" d="M 0,300 C 120,300 150,200 250,200 L 1440,200" stroke="url(#top-streak-grad)" stroke-width="4" stroke-linecap="round"/>
+      <defs>
+        <linearGradient id="top-streak-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#3d7eff" stop-opacity="0" />
+          <stop offset="30%" stop-color="#3d7eff" stop-opacity="0.8" />
+          <stop offset="50%" stop-color="#ffffff" stop-opacity="1" />
+          <stop offset="70%" stop-color="#903eff" stop-opacity="0.8" />
+          <stop offset="100%" stop-color="#903eff" stop-opacity="0" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- ── HULY METABRAIN SECTION ── -->
+  <section class="source-of-truth metabrain" id="metabrain">
+    <div class="container-wide">
+      <h2>Huly MetaBrain</h2>
+      <p class="section-desc">Connect every element of your workflow to build a dynamic knowledge base. Soon, Huly AI will turn it into a powerful asset — a second brain for your team.</p>
+      
+      <div class="metabrain-grid-wrap">
+        <!-- Card 1: Create tasks. -->
+        <div class="metabrain-card card-tasks">
+          <div class="card-text-overlay">
+            <p><strong class="font-medium text-white">Create tasks.</strong> Schedule your personal events and todos.</p>
+          </div>
+          <img class="card-bg-img" src="assets/tasks-mobile.jpg" alt="Create tasks">
+        </div>
+
+        <!-- Card 2: Plan your work. -->
+        <div class="metabrain-card card-plan">
+          <div class="card-text-overlay">
+            <p><strong class="font-medium text-white">Plan your work.</strong> Visualize your workday in your planner.</p>
+          </div>
+          <img class="card-bg-img desktop-only" src="assets/plan-work.jpg" alt="Plan your work">
+          <img class="card-bg-img mobile-only" src="assets/plan-work-mobile.jpg" alt="Plan your work">
+        </div>
+
+        <!-- Card 3: Calendar widget circle -->
+        <div class="metabrain-card card-calendar">
+          <img class="card-bg-img desktop-only" src="assets/calendar.png" alt="Calendar widget">
+        </div>
+
+        <!-- Card 4: Chat with team. -->
+        <div class="metabrain-card card-chat">
+          <div class="card-text-overlay">
+            <p><strong class="font-medium text-white">Chat with team.</strong> Send DM and create group chats.</p>
+          </div>
+          <img class="card-bg-img desktop-only" src="assets/collab.jpg" alt="Chat with team">
+          <img class="card-bg-img mobile-only" src="assets/collab-mobile.jpg" alt="Chat with team">
+        </div>
+
+        <!-- Card 5: Take notes. -->
+        <div class="metabrain-card card-notes">
+          <div class="card-text-overlay">
+            <p>
+              <img class="notes-icon-inline" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxNCAxNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTExLjM3NS4yMTlINS4xM2MtMS44ODQgMC0zLjUwNiAxLjQ0OC0zLjU5NSAzLjMzaTMuNSAzLjUgMCAwIDAgMy40OTYgMy42N2guNDM4djYuMzQ0YS4yMi4yMiAwIDAgMCAuMjE5LjIxOGguNDM3YS4yMi4yMiAwIDAgMCAuMjE5LS4yMTlWMS4wOTVoMi42MjV2MTIuNDY5YS4yMi4yMiAwIDAgMCAuMjE5LjIxOGguNDM3YS4yMi4yMiAwIDAgMCAuMjE5LS4yMTlWMS4wOTVoMS41MzFhLjIyLjIyIDAgMCAwIC4yMTktLjIxOVYuNDM4YS4yMi4yMiAwIDAgMC0uMjE5LS4yMiIvPjwvc3ZnPg==" alt="Notes icon">
+              <strong class="font-medium text-white">Take notes.</strong><br class="sm:hidden">Create documents to keep track of team resources
+            </p>
+          </div>
+          <img class="card-bg-img" src="assets/notes-mobile.jpg" alt="Take notes">
+        </div>
+
+        <!-- Card 6: Sync in real time. -->
+        <div class="metabrain-card card-sync">
+          <div class="card-text-overlay">
+            <p><strong class="font-medium text-white">Sync in real time.</strong> Connect with your team instantly to monitor progress and track updates.</p>
+          </div>
+          <img class="card-bg-img desktop-only" src="assets/teammates.jpg" alt="Sync in real time">
+          <img class="card-bg-img mobile-only" src="assets/teammates-mobile.jpg" alt="Sync in real time">
+        </div>
+
+        <!-- Card 7: Manage projects. -->
+        <div class="metabrain-card card-projects">
+          <div class="card-text-overlay">
+            <p><strong class="font-medium text-white">Manage projects.</strong> Customize your workspace to fit the needs of your teams.</p>
+          </div>
+          <img class="card-bg-img desktop-only" src="assets/pm.jpg" alt="Manage projects">
+          <img class="card-bg-img mobile-only" src="assets/pm-mobile.jpg" alt="Manage projects">
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered Fixed-Width Background Decorations Wrapper -->
+    <div class="metabrain-decorations-wrapper">
+      <img class="decor-shape shape-1" src="assets/9d5c77b6877e0fb053b9e6a6c6e031fe.svg" width="512" height="466" loading="lazy" alt="">
+      <img class="decor-shape shape-2" src="assets/4471f334ae899aaa11c9921e0d3e65bc.svg" width="768" height="699" loading="lazy" alt="">
+      <img class="decor-shape shape-3" src="assets/97e21ae98ab58474a251361eee0aa8c0.svg" width="752" height="689" loading="lazy" alt="">
+    </div>
+  </section>
+
+  <!-- ── KNOWLEDGE AT YOUR FINGERTIPS SECTION ── -->
+  <section class="knowledge" id="knowledge">
+    <div class="container-wide knowledge-grid">
+      
+      <!-- Content Column -->
+      <div class="knowledge-content-col">
+        <div>
+          <h2>
+            <span class="w-px h-full absolute left-1/2 top-0 -z-10" aria-hidden="true"></span>Knowledge at <br/>
+            Your Fingertips
+          </h2>
+          <p class="mt-10 lg:mt-9 md:mt-4 sm:mt-3">Huly offers a wide range of features to create and manage your project documentation. Huly's suite of collaborative editing tools boosts team efficiency.</p>
+          
+          <div class="relative mt-[26px]">
+            <!-- Formatting Toolbar -->
+            <div class="editor-toolbar-mock font-medium" style="opacity: 0; transform: translateY(14px);">
+              <button class="tb-btn btn-link"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" class="mr-1.5 h-3 w-3 stroke-white"><path d="M6 1v10M1 6h10"></path></svg> Link</button>
+              <span class="tb-divider ml-3 h-full w-px bg-grey-30 md:ml-2.5 sm:ml-2" aria-hidden="true"></span>
+              <button class="tb-btn ml-1 md:ml-0.5"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" class="h-7 w-7 fill-grey-60 hover:fill-white"><path d="M9.197 19.5V7.621h4.756q1.31 0 2.186.389t1.317 1.079q.44.684.44 1.577 0 .696-.278 1.224-.277.522-.765.859-.482.33-1.102.47v.115q.678.03 1.27.383.597.354.969.992.37.633.37 1.508 0 .945-.469 1.688-.465.737-1.375 1.166t-2.244.429zm2.511-2.053h2.047q1.05 0 1.532-.4.48-.406.481-1.08 0-.492-.238-.87a1.6 1.6 0 0 0-.678-.591q-.435-.215-1.039-.215h-2.105zm0-4.855h1.862q.517 0 .916-.18.406-.186.638-.522.238-.336.238-.806 0-.644-.458-1.038-.452-.395-1.288-.395h-1.908z"></path></svg><span class="sr-only">Bold</span></button>
+              <button class="tb-btn ml-1 md:ml-0.5 sm:ml-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" class="h-7 w-7 fill-grey-60 hover:fill-white"><path d="M21 8.556V7H10.889v1.556h3.998l-3.4 10.888H7V21h10.111v-1.556h-3.998l3.4-10.888z"></path></svg><span class="sr-only">Italic</span></button>
+              <button class="tb-btn ml-1 md:ml-0.5 sm:ml-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" class="h-7 w-7 fill-grey-60 hover:fill-white"><path d="M15.944 7.621h1.798v7.813q0 1.247-.586 2.21-.586.957-1.647 1.508-1.062.545-2.488.545-1.421 0-2.483-.545-1.062-.55-1.647-1.508-.585-.963-.586-2.21V7.621h1.792v7.668q0 .806.354 1.433.36.626 1.015.986.655.354 1.555.354.905 0 1.56-.354a2.5 2.5 0 0 0 1.01-.986q.353-.627.353-1.433zM7 22.164h12.833v1.167H7z"></path></svg><span class="sr-only">Underline</span></button>
+              <button class="tb-btn ml-1 md:ml-0.5 sm:ml-0"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 28 28" class="h-7 w-7 fill-grey-60 hover:fill-white"><path d="M15.944 7.621h1.798v7.813q0 1.247-.586 2.21-.586.957-1.647 1.508-1.062.545-2.488.545-1.421 0-2.483-.545-1.062-.55-1.647-1.508-.585-.963-.586-2.21V7.621h1.792v7.668q0 .806.354 1.433.36.626 1.015.986.655.354 1.555.354.905 0 1.56-.354a2.5 2.5 0 0 0 1.01-.986q.353-.627.353-1.433z"></path><path d="M7 14h12.833v1.167H7z"></path></svg><span class="sr-only">Line through</span></button>
+              <span class="tb-divider ml-1 h-full w-px bg-grey-30 md:ml-1" aria-hidden="true"></span>
+              <button class="tb-btn ml-2.5 cursor-default md:ml-1.5 sm:ml-1"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="h-5 w-5 stroke-grey-60 hover:stroke-white"><path d="M9.866 13.335c1.765 0 3.195-1.555 3.195-3.472S11.63 6.39 9.866 6.39 6.672 7.945 6.672 9.863s1.43 3.472 3.194 3.472"></path><path d="M13.059 6.39v5.758c0 1.727 2.595 2.025 3.968-.31 1.165-1.975.88-4.988-.575-6.97C14.312 1.947 9.364.857 5.77 3.27 2.467 5.487 1.29 9.973 3.116 13.598c1.806 3.588 6.045 5.327 9.881 4.03"></path></svg><span class="sr-only">Mention</span></button>
+              <button class="tb-btn ml-3 cursor-default md:ml-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" class="h-5 w-5 stroke-grey-60 hover:stroke-white"><g clip-path="url(#light_inline_svg__a)"><path d="M10 .836v1.111M16.489 3.516l-.786.785M19.174 10h-1.111M3.523 3.516l.786.785M.836 10h1.111M15.282 10.004a5.283 5.283 0 0 0-6.419-5.158c-2.08.436-3.722 2.175-4.064 4.272A5.27 5.27 0 0 0 8.06 14.9v2.603c0 .613.498 1.111 1.111 1.111h1.667c.613 0 1.11-.497 1.11-1.11V14.9a5.27 5.27 0 0 0 3.334-4.897M7.664 14.727h4.673"></path></g><defs><clipPath id="light_inline_svg__a"><path d="M0 0h20v20H0z"></path></clipPath></defs></svg><span class="sr-only">Highlight</span></button>
+            </div>
+            
+            <!-- Highlight Text block -->
+            <div class="relative">
+              <span class="relative z-10 md:pr-2">
+                <span class="absolute -left-3 top-[-7px] md:-left-2 sm:-left-1.5 editor-text-cursor-overlay" style="opacity:0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 36" class="height-9 h-9 w-2.5 rotate-180 md:h-[26px] md:w-2 sm:h-[25px] sm:w-[7px]"><path fill="currentColor" fill-rule="evenodd" d="M4 26.1A5.002 5.002 0 0 0 5 36a5 5 0 0 0 1-9.9V0H4z" clip-rule="evenodd"></path></svg>
+                </span>
+                <span class="font-semibold text-black">Documents in Huly</span> can be used for sharing reference materials among team members, collaborating on plans and roadmaps, storing meeting notes and assigning action items.
+              </span>
+              <div class="absolute top-0 scale-x-[1.02] knowledge-highlight-overlay" style="--highlight-position:0.115;opacity:0">
+                <span class="pointer-events-none bg-no-repeat py-0.5 pr-3 text-transparent md:pr-2" style="background:linear-gradient(90deg, #ffeba4 50%, transparent 50%) 100% 0 / 200% 100% no-repeat;background-position:calc((1 - var(--highlight-position)) * 100%) 0" aria-hidden="true"><span class="font-semibold text-black">Documents in Huly</span> can be used for sharing reference materials among team members, collaborating on plans and roadmaps, storing meeting notes and assigning action items.</span>
+              </div>
+              <div class="absolute left-4 top-0 w-full scale-[1.02] md:left-1 knowledge-cursor-overlay" style="--cursor-position:0.104;opacity:0">
+                <span class="pointer-events-none !bg-[length:10px_36px] bg-no-repeat py-2.5 text-transparent md:!bg-[length:8px_26px] md:pr-2 sm:!bg-[length:7px_25px]" style="background:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxMCAzNiI+PHBhdGggZmlsbD0iIzMwMzIzNiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNNCAyNi4xQTUuMDAyIDUuMDAyIDAgMCAwIDUgMzZhNSA1IDAgMCAwIDEtOS45VjBINHoiIGNsaXAtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==) 100% 0 no-repeat;background-position:calc(var(--cursor-position) * 100%) 8px" aria-hidden="true"><span class="font-semibold text-black">Documents in Huly</span> can be used for sharing reference materials among team members, collaborating on plans and roadmaps, storing meeting notes and assigning action items.</span>
+              </div>
+            </div>
+          </div>
+          
+          <img alt="Huly Document editor board" loading="lazy" width="706" height="423" class="mt-9 rounded-[10px] lg:mt-8 md:mt-7 md:h-auto md:w-full sm:mt-[19px] editor-billboard-img" src="assets/billboard.jpg"/>
+          
+          <div class="absolute left-0 top-0 h-[31.5%] w-px xl:h-[33%] sm:hidden w-px" aria-hidden="true"></div>
+          
+          <p class="relative -mt-8 pb-3 pt-[68px] lg:-mt-9 md:mt-[-19px] md:pt-[47px] sm:mt-[-22px] sm:pt-[38px] editor-desc-p">
+            <span class="absolute left-1/2 top-0 -z-10 h-full w-px" aria-hidden="true"></span>With<!-- --> 
+            <span class="text-live-anim">live</span> <!-- -->real-time collaboration, remote teams are able to work together to bring a unified vision to life on the page. Tagging users, linking to issues, and assigning action items are just a few of the<!-- --> 
+            <span class="text-live-anim-delayed">advanced solutions</span> 
+            <span class="relative pr-2 md:pr-1">
+              <strong class="font-medium text-orange"></strong>
+              <span class="relative">
+                <span class="absolute z-40 flex flex-col items-center hover:cursor-grab active:cursor-grabbing group bottom-[-8px] left-[-30px] text-orange md:bottom-[-4px] md:left-[-21px] sm:left-[-16px] pin-orange" aria-hidden="true" draggable="false">
+                  <img alt="" loading="lazy" width="66" height="66" class="pointer-events-none z-10 max-w-none rounded-full border-2 border-orange shadow-[0px_6px_25px_0px_#00000080]" src="assets/orange-pin-image.jpg"/>
+                  <span class="flex flex-col items-center pin-stalk-group">
+                    <span class="h-[27px] w-0.5 bg-orange md:h-[18px] md:w-px pin-stalk-line"></span>
+                    <span class="-mt-px h-2.5 w-2.5 rounded-full bg-orange md:h-[7px] md:w-[7px] pin-stalk-dot"></span>
+                  </span>
+                </span>
+              </span>
+            </span>available within the Huly document editor.
+          </p>
+          
+          <img alt="Footer details" loading="lazy" width="704" height="336" class="mt-[22px] rounded-[10px] lg:mt-[22px] md:mt-[11px] md:h-auto md:w-full sm:mt-[3px] editor-footer-graphic" src="assets/11129cb398cec0781980fa6071f63c4c.svg"/>
+          
+          <p class="mt-9 lg:mt-8 md:mt-6 sm:mt-4">Documents can be enhanced with rich text formatting, images, attachments and code blocks. Use documents to organize team plans, create technical documentation and support your team's progress towards shared goals.</p>
+          
+          <div class="mt-5 flex items-start md:mt-4 sm:mt-2.5 editor-tap-continue">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 36" class="mr-1 h-auto w-2.5 rotate-180 fill-black md:w-2 sm:w-1.5"><path fill="currentColor" fill-rule="evenodd" d="M4 26.1A5.002 5.002 0 0 0 5 36a5 5 0 0 0 1-9.9V0H4z" clip-rule="evenodd"></path></svg>
+            <span class="mt-2 text-grey-70">Tap here to continue...</span>
+          </div>
+          
+          <div class="mt-3 flex w-fit gap-x-1 rounded-full bg-grey-98 p-[5px] shadow-[0px_4px_10px_0px_rgba(0,0,0,0.15)] md:mt-1.5 sm:mt-2 sm:gap-x-0.5 sm:p-1 editor-bottom-circles-bar">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-grey-20 md:h-[30px] md:w-[30px] sm:h-[27px] sm:w-[27px] btn-circle bg-dark">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 12 12" class="m-auto h-auto w-3.5 stroke-white sm:w-3"><path d="M6 1v10M1 6h10"></path></svg>
+            </div>
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-grey-94 md:h-[30px] md:w-[30px] sm:h-[27px] sm:w-[27px] btn-circle bg-light">
+              <img class="m-auto h-auto w-5 sm:w-3" src="assets/3025df96db45e17e4ce4a52f5eb60533.svg" height="20" width="20" loading="lazy" alt=""/>
+            </div>
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-grey-94 md:h-[30px] md:w-[30px] sm:h-[27px] sm:w-[27px] btn-circle bg-light">
+              <img class="m-auto h-auto w-4.5 sm:w-3" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9Im5vbmUiIHZpZXdCb3g9IjAgMCAxOCAxOCI+PHBhdGggZmlsbD0iIzMwMzIzNiIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNMTMuODU0Ljc3MWEuNS41IDAgMCAwLS43MDcgMGwtMi4yNSAyLjI1LTkgOWEuNS41IDAgMCAwLS4xMzIuMjMzbC0xLjEyNSA0LjVhLjUuNSAwIDAgMCAuNjA2LjYwNmw0LjUtMS4xMjVhLjUuNSAwIDAgMCAuMjMzLS4xMzFsOS05IDIuMjUtMi4yNWEuNS41IDAgMCAwIDAtLjcwOHptLjc3MSA1LjI3MkwxNi4xNjggNC41IDEzLjUgMS44MzJsLWwxLjU0MyAxLjU0M3ptLTMuMzc1LTEuOTZMMi4xMDEgMTIuNjNsLS44ODkgMy41NTcgMy41NTctLjg5IDguNTQ5LTguNTQ4eiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmciPg==" height="18" width="18" loading="lazy" alt=""/>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Sticky Sidebar Card Column (with order-first) -->
+      <div class="knowledge-sticky-col">
+        <div class="sticky-huly-card">
+          <!-- Slide 1: Collaborate -->
+          <div class="sticky-slide-text slide-collaborate">
+            <h3 class="font-semibold leading-snug tracking-tight">Collaborate</h3>
+            <p class="mt-1.5 text-15 leading-snug tracking-tight">Enhance teamwork with powerful real-time collaboration features.</p>
+          </div>
+          <!-- Slide 2: Version History -->
+          <div class="sticky-slide-text slide-history">
+            <h3 class="font-semibold leading-snug tracking-tight">Version History</h3>
+            <p class="mt-1.5 text-15 leading-snug tracking-tight">Track every edit effortlessly, and never lose a single change.</p>
+          </div>
+          <!-- Card backdrop glow decoration -->
+          <div class="pointer-events-none absolute bottom-[-52.5%] left-1/2 aspect-[.912] w-[178.125%] -translate-x-1/2">
+            <span class="absolute left-1/2 top-0 -z-10 h-full w-px" aria-hidden="true"></span>
+            <div class="relative h-full w-full card-glow-bg" aria-hidden="true"></div>
+          </div>
+        </div>
+        <div class="absolute left-0 top-0 h-[31.5%] w-px xl:h-[33%]" aria-hidden="true"></div>
+      </div>
+      
+    </div>
+    
+    <!-- Background lines decoration -->
+    <div class="relative z-0">
+      <div class="container-wide relative">
+        <img alt="" loading="lazy" width="595" height="3167" class="lines-bg-img" src="assets/lines-bg.png"/>
+      </div>
+    </div>
+  </section>
+  <div class="section-divider-wrap knowledge-to-clock-divider">
+    <svg class="transition-curve-svg" viewBox="0 0 1440 300" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Fills -->
+      <path d="M 0,0 L 1440,0 L 1440,100 C 1300,100 1280,200 1200,200 L 0,200 Z" fill="#ffffff" />
+      <path d="M 0,200 L 1200,200 C 1280,200 1300,100 1440,100 L 1440,300 L 0,300 Z" fill="#0b0c0f" />
+      
+      <!-- Glowing white-blue streak path -->
+      <path id="knowledge-glow-streak" d="M 0,200 L 1200,200 C 1280,200 1300,100 1440,100" stroke="url(#bottom-streak-grad)" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+  <!-- ── JOIN THE MOVEMENT SECTION (WITH CLOCK) ── -->
+  <section class="join-movement" id="join-movement">
+    <div class="movement-container">
+      <div class="movement-visual">
+        <!-- The beautiful Clock with neon lights -->
+        <div class="huly-clock">
+          <div class="clock-rim-glow"></div>
+          <div class="clock-crown"></div>
+          <div class="clock-face">
+            <!-- Concentric Glowing Arcs inside the bezel -->
+            <svg class="clock-rim-svg" viewBox="0 0 320 320" width="320" height="320">
+              <circle class="clock-blue-ring clock-minute-arc" cx="160" cy="160" r="125" fill="none" stroke="var(--accent-blue)" stroke-width="5" stroke-linecap="round" transform="rotate(-90 160 160)" />
+              <circle class="clock-orange-ring clock-hour-arc" cx="160" cy="160" r="110" fill="none" stroke="var(--accent-orange)" stroke-width="5" stroke-linecap="round" transform="translate(320 0) scale(-1 1) rotate(-90 160 160)" />
+            </svg>
+            
+            <div class="clock-hands">
+              <div class="hand hour-hand"></div>
+              <div class="hand minute-hand"></div>
+              <div class="hand second-hand"></div>
+            </div>
+            
+            <!-- 3D Embossed Huly Logo -->
+            <svg viewBox="0 0 100 100" class="clock-logo-svg">
+              <defs>
+                <linearGradient id="hulyLogoGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" stop-color="#1e2026" />
+                  <stop offset="100%" stop-color="#0c0d10" />
+                </linearGradient>
+              </defs>
+              <rect class="logo-quad" x="22" y="22" width="24" height="24" rx="6" fill="url(#hulyLogoGrad)" />
+              <rect class="logo-quad" x="54" y="22" width="24" height="24" rx="6" fill="url(#hulyLogoGrad)" />
+              <rect class="logo-quad" x="22" y="54" width="24" height="24" rx="6" fill="url(#hulyLogoGrad)" />
+              <rect class="logo-quad" x="54" y="54" width="24" height="24" rx="6" fill="url(#hulyLogoGrad)" />
+            </svg>
+            
+            <div class="clock-numbers">
+              <span class="num n12">12</span>
+              <span class="num n1">1</span>
+              <span class="num n2">2</span>
+              <span class="num n3">3</span>
+              <span class="num n4">4</span>
+              <span class="num n5">5</span>
+              <span class="num n6">6</span>
+              <span class="num n7">7</span>
+              <span class="num n8">8</span>
+              <span class="num n9">9</span>
+              <span class="num n10">10</span>
+              <span class="num n11">11</span>
+            </div>
+          </div>
+          <!-- Glowing beams extending behind the clock -->
+          <div class="clock-beam beam-orange"></div>
+          <div class="clock-beam beam-blue"></div>
+        </div>
+      </div>
+      <div class="movement-content">
+        <h2>Join the Movement</h2>
+        <p>Unlock the future of productivity with Huly. Remember, this journey is just getting started.</p>
+        <div class="movement-actions">
+          <a href="#action" class="btn-glow-orange large">SEE IN ACTION</a>
+          <a href="#slack" class="btn-slack">
+            <!-- Slack icon -->
+            <svg class="slack-svg" viewBox="0 0 54 54" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M10.13 17.842a5.07 5.07 0 0 1-5.065-5.065c0-2.8 2.266-5.066 5.065-5.066h5.065v5.066a5.07 5.07 0 0 1-5.065 5.065m0 5.065h5.065v10.13H10.13a5.07 5.07 0 0 1-5.065-5.066c0-2.799 2.266-5.065 5.065-5.065" fill="#36C5F0"/>
+                <path d="M17.842 10.13a5.07 5.07 0 0 1 5.065-5.065c2.8 0 5.066 2.266 5.066 5.065v5.065h-5.066a5.07 5.07 0 0 1-5.065-5.065m5.065 7.712v10.13h10.13v-10.13z" fill="#2EB67D"/>
+                <path d="M43.87 36.158a5.07 5.07 0 0 1 5.065 5.065c0 2.8-2.266 5.066-5.065 5.066h-5.065v-5.066a5.07 5.07 0 0 1 5.065-5.065m0-5.065h-5.065v-10.13h5.065c2.8 0 5.066 2.266 5.066 5.065 0 2.8-2.266 5.065-5.066 5.065" fill="#ECB22E"/>
+                <path d="M36.158 43.87a5.07 5.07 0 0 1-5.065 5.065c-2.8 0-5.066-2.266-5.066-5.065v-5.065h5.066a5.07 5.07 0 0 1 5.065 5.065m-5.065-7.712v-10.13h-10.13v10.13z" fill="#E01E5A"/>
+              </g>
+            </svg>
+            JOIN OUR SLACK
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PRICING SECTION (WITH GLOWING COMMON CARD) ── -->
+  <section class="pricing" id="pricing">
+    <div class="container-small">
+      <div class="section-header center-align">
+        <h2>Simple, transparent pricing.</h2>
+        <p>Start free and scale as your engineering team grows.</p>
+      </div>
+      
+      <div class="pricing-cards-container">
+        <!-- Glowing Common Card -->
+        <div class="pricing-card card-electric-glow">
+          <div class="pricing-glow-border"></div>
+          <div class="pricing-card-inner">
+            <span class="tier-name">Common</span>
+            <div class="price-wrap">
+              <span class="price-symbol">$</span>
+              <span class="price-val">0</span>
+              <span class="price-period">/monthly</span>
+            </div>
+            <p class="tier-desc">For individuals and teams getting started with Huly.</p>
+            
+            <div class="pricing-divider"></div>
+            
+            <ul class="pricing-features-list">
+              <li><span class="check-icon">✓</span> Unlimited users</li>
+              <li><span class="check-icon">✓</span> Unlimited Huly Objects</li>
+              <li><span class="check-icon">✓</span> 10GB Storage per Workspace <span class="info-bubble" title="10 gigabytes of total files storage">i</span></li>
+              <li><span class="check-icon">✓</span> 10GB Video/Audio Traffic <span class="info-bubble" title="10 gigabytes of monthly traffic for calls">i</span></li>
+              <li><span class="check-icon">✓</span> AI — TBD</li>
+            </ul>
+            
+            <a href="#start" class="btn-pricing-action">Start Free</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-container">
+      <a href="#" class="logo">UI<span class="dot">.</span></a>
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#office">Virtual Office</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <p class="copyright">&copy; 2026 UI Platform. All Rights Reserved. Built with Antigravity.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

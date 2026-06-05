@@ -1,0 +1,41 @@
+# UI Platform — Full Developer & Architecture Specification
+
+This document serves as the canonical description of UI, an open-source engineering workspace and developer platform. It details the architecture, design assets, interactive kinetic specs, and layout design systems.
+
+---
+
+## 1. Core Platform Architecture
+UI is designed to solve the cognitive load of switching context between separate SaaS tools by merging them into a unified experience.
+
+### Architectural Pillars:
+1. **Inbox Flow:** A central collector of notifications, pull request comments, and chat mentions that can be acted upon directly.
+2. **Team Planner:** A calendar tracking both milestones and daily calendar blocks, allowing developer focus times to be reserved.
+3. **Wiki & Docs:** Real-time collaborative documents nested directly within repository tracking items.
+4. **Embedded Conferencing:** Collaborative audio/video modules utilizing WebRTC directly on task details.
+
+---
+
+## 2. Interactive Kinetic Specifications
+To provide a premium developer experience, the UI platform landing page features:
+
+### Rotating Border Beam
+- Pseudo-element conic gradients rotating continuously on primary action buttons (e.g., `.btn-beam`).
+- Enhances CTA visual hierarchy without relying on heavy video or static gradient borders.
+
+### Cursor-Reactive Flashlight Mask
+- Utilizes CSS `clip-path: circle(180px at var(--mouse-x) var(--mouse-y))` to reveal the high-fidelity workbench dashboard when the user sweeps their cursor over the base wireframe grid.
+- Allows real-time inspection of active tasks, sidebar lists, and rendering graphs with zero initial loading lag.
+
+### Bento Hover Glow
+- Dynamic HSL gradient spots tracking cursor positioning over bento feature cards, creating a glassmorphism glow effect on raised surfaces.
+
+---
+
+## 3. Design Tokens & Styling Variables
+- **Main Background:** HSL(220, 14%, 4%) / `#090a0c`
+- **Secondary Surfaces:** HSL(220, 10%, 8%) / `#121316`
+- **Electric Blue Accent:** HSL(219, 100%, 62%) / `#3d7eff`
+- **Violet Accent:** HSL(269, 100%, 62%) / `#903eff`
+- **Warm Orange Glow:** HSL(19, 100%, 75%) / `#ffaa81`
+- **Primary Typography:** Space Grotesk (geometric headings)
+- **Secondary Typography:** Inter (high-density body copy)

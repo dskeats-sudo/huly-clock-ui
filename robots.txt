@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Custom crawls allowed
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://uiworkspace.dev/sitemap.xml
