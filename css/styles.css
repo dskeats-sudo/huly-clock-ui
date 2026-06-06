@@ -2798,36 +2798,31 @@ footer .logo .dot {
   z-index: 5;
 }
 
-/* Glowing connector linking Card 1 (Tasks, Col 2) bottom to Card 5 (Notes, Col 1) top */
-.metabrain-grid-wrap::before {
-  content: "";
+/* Combined morphed background for Card 1 and Card 5 on desktop */
+.metabrain-tasks-notes-bg {
   position: absolute;
-  left: -24px;
-  width: 24px;
-  top: 249px; /* Starts in the middle of the gap */
-  bottom: 90px; /* Mid-height of Card 5 */
-  border-left: 2px solid #5a85ff;
-  border-top: 2px solid #5a85ff;
-  border-top-left-radius: 12px;
-  box-shadow: -4px 0 15px rgba(90, 133, 255, 0.4), inset 2px 0 5px rgba(90, 133, 255, 0.2);
-  filter: drop-shadow(0 0 8px rgba(90, 133, 255, 0.6));
+  left: -8px;
+  top: -8px;
+  width: calc(40% + 5px);
+  height: 514px;
+  z-index: 1;
   pointer-events: none;
-  z-index: 2;
 }
 
-.metabrain-grid-wrap::after {
-  content: "";
-  position: absolute;
-  left: -24px;
-  width: calc(20% + 28px); /* Extends from -24px to the start of Col 2 (Card 1) */
-  top: 90px; /* Mid-height of Card 1 */
-  height: 159px; /* Reaches exactly to the gap line at y = 249px */
-  border-right: 2px solid #5a85ff;
-  border-bottom: 2px solid #5a85ff;
-  border-bottom-right-radius: 12px;
-  filter: drop-shadow(0 0 8px rgba(90, 133, 255, 0.6));
-  pointer-events: none;
-  z-index: 2;
+@media (min-width: 993px) {
+  .card-tasks,
+  .card-notes {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+  }
+  .card-tasks:hover,
+  .card-notes:hover {
+    transform: none !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+  }
 }
 
 /* Cards Default Styles */

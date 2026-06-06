@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   
-  <link rel="stylesheet" href="css/styles.css?v=1.0.7">
+  <link rel="stylesheet" href="css/styles.css?v=1.0.8">
   
   <!-- JSON-LD Structured Data (GEO-SEO) -->
   <script type="application/ld+json">
@@ -727,12 +727,15 @@
       <p class="section-desc">Connect every element of your workflow to build a dynamic knowledge base. Soon, Huly AI will turn it into a powerful asset — a second brain for your team.</p>
       
       <div class="metabrain-grid-wrap">
+        <!-- Combined morphed background for Card 1 and Card 5 on desktop -->
+        <img class="metabrain-tasks-notes-bg desktop-only" src="assets/tasks-notes.png" alt="">
+
         <!-- Card 1: Create tasks. -->
         <div class="metabrain-card card-tasks">
           <div class="card-text-overlay">
             <p><strong class="font-medium text-white">Create tasks.</strong> Schedule your personal events and todos.</p>
           </div>
-          <img class="card-bg-img" src="assets/tasks-mobile.jpg" alt="Create tasks">
+          <img class="card-bg-img mobile-only" src="assets/tasks-mobile.jpg" alt="Create tasks">
         </div>
 
         <!-- Card 2: Plan your work. -->
@@ -766,7 +769,7 @@
               <strong class="font-medium text-white">Take notes.</strong><br class="sm:hidden">Create documents to keep track of team resources
             </p>
           </div>
-          <img class="card-bg-img" src="assets/notes-mobile.jpg" alt="Take notes">
+          <img class="card-bg-img mobile-only" src="assets/notes-mobile.jpg" alt="Take notes">
         </div>
 
         <!-- Card 6: Sync in real time. -->
