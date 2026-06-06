@@ -3162,7 +3162,6 @@ footer .logo .dot {
   padding-top: 222px;
   order: -1; /* Placed first visually on desktop */
   box-sizing: border-box;
-  align-self: stretch;
 }
 
 @media (min-width: 1440px) {
