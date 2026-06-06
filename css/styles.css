@@ -2760,7 +2760,7 @@ footer .logo .dot {
 }
 
 .metabrain .container-wide {
-  max-width: 1200px;
+  max-width: 1408px;
 }
 
 .source-of-truth h2 {
@@ -2791,7 +2791,7 @@ footer .logo .dot {
 .metabrain-grid-wrap {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  gap: 24px;
   width: 100%;
   box-sizing: border-box;
   position: relative;
@@ -2802,10 +2802,10 @@ footer .logo .dot {
 .metabrain-grid-wrap::before {
   content: "";
   position: absolute;
-  left: -24px;
-  top: 90px; /* Mid-height of Card 1 */
-  bottom: 90px; /* Mid-height of Card 5 */
-  width: 24px;
+  left: -30px;
+  top: 105px; /* Mid-height of Card 1 */
+  bottom: 105px; /* Mid-height of Card 5 */
+  width: 30px;
   border-left: 2px solid #5a85ff;
   border-top: 2px solid #5a85ff;
   border-bottom: 2px solid #5a85ff;
@@ -2820,8 +2820,8 @@ footer .logo .dot {
 /* Cards Default Styles */
 .metabrain-card {
   position: relative;
-  height: 240px;
-  border-radius: 30px;
+  height: 280px;
+  border-radius: 34px;
   background: #0b0c0e;
   border: 1px solid rgba(255, 255, 255, 0.15);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 20px 40px rgba(0, 0, 0, 0.2);
@@ -2840,16 +2840,16 @@ footer .logo .dot {
 
 .metabrain-card .card-text-overlay {
   position: absolute;
-  top: 24px;
-  left: 24px;
-  right: 24px;
+  top: 28px;
+  left: 28px;
+  right: 28px;
   z-index: 10;
   pointer-events: none;
 }
 
 .metabrain-card .card-text-overlay p {
-  font-size: 15px;
-  line-height: 1.45;
+  font-size: 17px;
+  line-height: 1.5;
   color: rgba(255, 255, 255, 0.65);
   font-weight: 300;
   margin: 0;
@@ -2859,7 +2859,7 @@ footer .logo .dot {
   font-family: var(--font-title);
   color: #ffffff;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .metabrain-card .card-bg-img {
@@ -2867,10 +2867,10 @@ footer .logo .dot {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: 180px;
   object-fit: cover;
   object-position: top;
-  border-radius: 0 0 30px 30px;
+  border-radius: 0 0 34px 34px;
   pointer-events: none;
   z-index: 1;
 }
@@ -2905,8 +2905,8 @@ footer .logo .dot {
 
 .card-calendar .card-bg-img.desktop-only {
   position: relative;
-  width: 210px;
-  height: 210px;
+  width: 250px;
+  height: 250px;
   max-width: max-content;
   border-radius: 0;
 }
@@ -2930,7 +2930,7 @@ footer .logo .dot {
   margin-top: -4px;
   top: 5px;
   width: 1px;
-  height: 18px;
+  height: 20px;
   background-color: #D1D4FA;
   opacity: 0.8;
   animation: cursor-blink 1s step-end infinite;
@@ -2942,10 +2942,10 @@ footer .logo .dot {
 }
 
 .notes-icon-inline {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
 }
 
 .card-sync {
