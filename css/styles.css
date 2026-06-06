@@ -2883,10 +2883,10 @@ footer .logo .dot {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 150px;
+  height: 100%;
   object-fit: cover;
-  object-position: top;
-  border-radius: 0 0 30px 30px;
+  object-position: center bottom;
+  border-radius: 30px;
   pointer-events: none;
   z-index: 1;
 }
@@ -2900,6 +2900,10 @@ footer .logo .dot {
 .card-plan {
   grid-column: 3;
   grid-row: 1;
+}
+
+.card-plan .card-bg-img {
+  object-position: left bottom !important;
 }
 
 .card-calendar {
@@ -2972,6 +2976,10 @@ footer .logo .dot {
 .card-projects {
   grid-column: 4 / span 2;
   grid-row: 2;
+}
+
+.card-projects .card-bg-img {
+  object-position: right bottom !important;
 }
 
 /* Centered fixed-width decorations wrapper */
