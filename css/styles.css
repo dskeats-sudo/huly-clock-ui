@@ -24,6 +24,14 @@
   --flashlight-size: 190px;
 }
 
+/* ── VISIBILITY UTILITIES ── */
+.mobile-only {
+  display: none !important;
+}
+.desktop-only {
+  display: block !important;
+}
+
 /* ── RESET & BASE STYLES ── */
 * {
   box-sizing: border-box;
@@ -3899,6 +3907,13 @@ footer .logo .dot {
 }
 
 @media (max-width: 992px) {
+  .mobile-only {
+    display: block !important;
+  }
+  .desktop-only {
+    display: none !important;
+  }
+
   .container-wide {
     max-width: 768px;
     padding: 0 16px;
