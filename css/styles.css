@@ -2803,12 +2803,12 @@ footer .logo .dot {
   content: "";
   position: absolute;
   left: -24px;
-  top: 90px; /* Mid-height of Card 1 */
-  bottom: 90px; /* Mid-height of Card 5 */
   width: 24px;
+  top: 249px; /* Starts in the middle of the gap */
+  bottom: 90px; /* Mid-height of Card 5 */
   border-left: 2px solid #5a85ff;
-  border-bottom: 2px solid #5a85ff;
-  border-bottom-left-radius: 12px;
+  border-top: 2px solid #5a85ff;
+  border-top-left-radius: 12px;
   box-shadow: -4px 0 15px rgba(90, 133, 255, 0.4), inset 2px 0 5px rgba(90, 133, 255, 0.2);
   filter: drop-shadow(0 0 8px rgba(90, 133, 255, 0.6));
   pointer-events: none;
@@ -2819,11 +2819,12 @@ footer .logo .dot {
   content: "";
   position: absolute;
   left: -24px;
-  top: 90px;
   width: calc(20% + 28px); /* Extends from -24px to the start of Col 2 (Card 1) */
-  height: 2px;
-  border-top: 2px solid #5a85ff;
-  border-top-left-radius: 12px;
+  top: 90px; /* Mid-height of Card 1 */
+  height: 159px; /* Reaches exactly to the gap line at y = 249px */
+  border-right: 2px solid #5a85ff;
+  border-bottom: 2px solid #5a85ff;
+  border-bottom-right-radius: 12px;
   filter: drop-shadow(0 0 8px rgba(90, 133, 255, 0.6));
   pointer-events: none;
   z-index: 2;
