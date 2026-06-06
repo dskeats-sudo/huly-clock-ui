@@ -2810,7 +2810,7 @@ footer .logo .dot {
 .metabrain-tasks-notes-bg {
   position: absolute;
   left: -20px;
-  top: -20px;
+  top: -4px;
   width: calc(40% + 5px);
   height: 514px;
   z-index: 1;
@@ -2824,13 +2824,18 @@ footer .logo .dot {
     border: none !important;
     box-shadow: none !important;
     overflow: visible !important;
-    transform: translate(-12px, -12px) !important;
   }
-  .card-tasks:hover,
+  .card-tasks {
+    transform: translateX(-12px) !important;
+  }
+  .card-tasks:hover {
+    transform: translateX(-12px) !important;
+  }
+  .card-notes {
+    transform: translate(-12px, -8px) !important;
+  }
   .card-notes:hover {
-    transform: translate(-12px, -12px) !important;
-    border-color: transparent !important;
-    box-shadow: none !important;
+    transform: translate(-12px, -8px) !important;
   }
 }
 
